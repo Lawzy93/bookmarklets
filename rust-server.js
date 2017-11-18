@@ -6,7 +6,7 @@
     let rs_box = document.createElement('div');
     rs_box.className = 'rs-box';
     rs_box.id = 'rs-box';
-    rs_box.innerHTML = '<iframe width=500 height=80 frameborder=0 style="border:0" name="qhuwk" src="https://cdn.battlemetrics.com/b/horizontal500x80px/636365.png?foreground=%23EEEEEE&background=%23222222&lines=%23333333&linkColor=%231185ec&chartColor=%23FF0700"></iframe>';
+    rs_box.innerHTML = '<iframe width=500 height=80 frameborder=0 style="border:0" name="dykro" src="https://cdn.battlemetrics.com/b/standardVertical/636365.html?foreground=%23EEEEEE&linkColor=%231185ec&lines=%23333333&background=%23222222&chart=players%3A24H&chartColor=%23FF0700&showPlayers=1&maxPlayersHeight=300"></iframe>';
     rs_box.innerHTML += '<div class="rs-close" onclick="(function(){document.body.removeChild(document.getElementById(\'rs-box\'));})();">&times;</div>';
     document.body.appendChild(rs_box);
 
