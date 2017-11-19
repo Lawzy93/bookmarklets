@@ -1,8 +1,6 @@
-try {
+if (typeof rs_timer == 'undefined') {
     let rs_timer;
     const rs_timer_l = 10*1000;
-} catch(e) {
-    console.log('Variables already defined... continuing');
 }
 
 rs_addCss();
