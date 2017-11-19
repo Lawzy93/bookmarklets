@@ -11,7 +11,8 @@
     });
 })();
 
-let rs_timer, rs_timer_l = 10*1000;
+let rs_timer;
+let rs_timer_l = 10*1000;
 
 function rs_addCss() {
     if (document.getElementById('rs_css') == undefined) {
@@ -40,7 +41,7 @@ function rs_createBox() {
     rs_box.innerHTML += '<div class="rs-close" onclick="rs_destroyBox(\'rs_box\');">&times;</div>';
     document.body.appendChild(rs_box);
 
-    timer = setTimeout(rs_refreshBox(), rs_timer_l);
+    timer = setTimeout(rs_refreshBox, rs_timer_l);
 }
 
 function rs_destroyBox(id) {
@@ -54,5 +55,5 @@ function rs_refreshBox() {
     rs_destroyBox('_rs_box');
 
     clearTimeout(timer);
-    timer = setTimeout(rs_refreshBox(), rs_timer_l);
+    timer = setTimeout(rs_refreshBox, rs_timer_l);
 }
