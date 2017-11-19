@@ -11,6 +11,8 @@
     });
 })();
 
+let rs_timer, rs_timer_l = 10*1000;
+
 function rs_addCss() {
     if (document.getElementById('rs_css') == undefined) {
         let rs_css = document.createElement('style');
@@ -37,14 +39,20 @@ function rs_createBox() {
     rs_box.innerHTML = '<iframe width=500 height=80 frameborder=0 style="border:0" name="dykro" src="https://cdn.battlemetrics.com/b/standardVertical/636365.html?foreground=%23EEEEEE&linkColor=%231185ec&lines=%23333333&background=%23222222&chart=players%3A24H&chartColor=%23FF0700&showPlayers=1&maxPlayersHeight=300"></iframe>';
     rs_box.innerHTML += '<div class="rs-close" onclick="rs_destroyBox(\'rs_box\');">&times;</div>';
     document.body.appendChild(rs_box);
+
+    timer = setTimeout(rs_refreshBox(), rs_timer_l);
 }
 
 function rs_destroyBox(id) {
     document.body.removeChild(document.getElementById(id));
+    clearTimeout(timer);
 }
 
 function rs_refreshBox() {
     document.getElementById('rs_box').id = '_rs_box';
     rs_createBox();
     rs_destroyBox('_rs_box');
+
+    clearTimeout(timer);
+    timer = setTimeout(rs_refreshBox(), rs_timer_l);
 }
