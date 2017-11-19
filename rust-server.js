@@ -1,18 +1,16 @@
-(function() {
-    rs_addCss();
-    rs_addBox();
-
-    window.addEventListener('message',function(e){
-        if (e.data.uid&&e.data.type==='sizeUpdate') {
-            var i = document.querySelector('iframe[name="'+e.data.uid+'"]');
-            i.style.width = e.data.payload.width;
-            i.style.height = e.data.payload.height;
-        }
-    });
-})();
-
 let rs_timer;
 let rs_timer_l = 10*1000;
+
+rs_addCss();
+rs_addBox();
+
+window.addEventListener('message',function(e){
+    if (e.data.uid&&e.data.type==='sizeUpdate') {
+        var i = document.querySelector('iframe[name="'+e.data.uid+'"]');
+        i.style.width = e.data.payload.width;
+        i.style.height = e.data.payload.height;
+    }
+});
 
 function rs_addCss() {
     if (document.getElementById('rs_css') == undefined) {
