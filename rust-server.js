@@ -1,6 +1,6 @@
 if (typeof rs_timer == 'undefined') {
-    let rs_timer;
-    const rs_timer_l = 10*1000;
+    var rs_timer;
+    var rs_timer_l = 10*1000;
 }
 
 rs_addCss();
