@@ -1,5 +1,7 @@
-let rs_timer;
-let rs_timer_l = 10*1000;
+if (rs_timer_l == undefined) {
+    let rs_timer;
+    const rs_timer_l = 10*1000;
+}
 
 rs_addCss();
 rs_addBox();
