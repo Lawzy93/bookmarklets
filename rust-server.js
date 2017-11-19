@@ -16,7 +16,7 @@ function rs_addCss() {
         let rs_css = document.createElement('style');
         rs_css.id = 'rs_css';
         rs_css.innerHTML = '.rs-box {position: fixed; bottom: 10px; right: 10px; z-index: 10;}';
-        rs.css.innerHTML += '\n' + '.rs-close {position: absolute; top: 0px; right: 0px; color: #ffffff; padding:8px 16px; vertical-align: middle; overflow: hidden; text-align: center; cursor: pointer; white-space: nowrap;}';
+        rs_css.innerHTML += '\n' + '.rs-close {position: absolute; top: 0px; right: 0px; color: #ffffff; padding:8px 16px; vertical-align: middle; overflow: hidden; text-align: center; cursor: pointer; white-space: nowrap;}';
         rs_css.innerHTML += '\n' + '.rs-close:hover {background-color: #ff0000;}';
         document.body.appendChild(rs_css);
     }
